@@ -12,7 +12,7 @@ try {
     console.log('DB not connected')
 }
 const corsOptions = {
-    origin: 'http://localhost:3000', 
+    origin: 'https://todo-client-one-dun.vercel.app', 
     methods: ['GET,POST','DELETE','PUT'], 
     credentials: true,  
   };
