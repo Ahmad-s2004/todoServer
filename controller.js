@@ -44,7 +44,7 @@ const signin = async (req, res) => {
       }
   
       const token = jwt.sign({ id: findUser._id }, 'your_secret_key', { expiresIn: '72h' });
-      return res.status(200).cookie('token', token, ).json({ message: "User logged in successfully", findUser });
+      return res.status(200).cookie('token', token, ).json({ message: "User logged in successfully", findUser, token });
       
     } catch (error) {
       return res.status(500).json({ message: "Internal server error" });
